@@ -1,0 +1,29 @@
+{
+    "vehicles": [
+      {
+        "vehicle": "Bike",
+        "ownerName": "Vitaliy Shcherbanych",
+        "details": "some detail about Bike"
+      },
+      {
+        "vehicle": "Car",
+        "ownerName": "Vitaliy Shcherbanych",
+        "details": "some detail about Car"
+      },
+      {
+        "vehicle": "Car",
+        "ownerName": "John Doe",
+        "details": "some detail about Car"
+      },
+      {
+        "vehicle": "Airplane",
+        "ownerName": "Bill Gates",
+        "details": "some detail about Airplane"
+      } ,
+      {
+        "vehicle": "SpaceX",
+        "ownerName": "Elon Musk",
+        "details": "some detail about SpaceX"
+      }      
+    ]
+  }
