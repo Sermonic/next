@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { VehiclePerson } from "../../../api/VehiclePerson";
-import { NextPage, NextPageContext } from "next";
+import { NextPageContext } from "next";
 
 export interface PersonProps {
   ownersList?: VehiclePerson[];

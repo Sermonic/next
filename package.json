@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node ./database-test.js && next dev",
     "build": "next build",
     "start": "next start",
     "mock-server": "json-server --watch db.json -p 4000 -d 100"
@@ -11,7 +11,8 @@
   "dependencies": {
     "next": "9.4.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "sqlite": "3"
   },
   "devDependencies": {
     "@types/node": "^14.0.4",
