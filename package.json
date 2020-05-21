@@ -9,6 +9,8 @@
     "mock-server": "json-server --watch db.json -p 4000 -d 100"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.14",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "9.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
