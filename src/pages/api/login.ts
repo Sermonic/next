@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import sqlite from "sqlite";
 import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
+import cookie from "cookie";
 import { secret } from "../../../api/secret";
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
@@ -18,7 +19,19 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
         const jwt = sign(claims, secret, {
           expiresIn: "1h",
         });
-        res.json({ authToken: jwt });
+
+        res.setHeader(
+          "Set-Cookie",
+          cookie.serialize("auth", jwt, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV !== "development",
+            sameSite: "strict",
+            maxAge: 3600,
+            path: "/",
+          })
+        );
+
+        res.json({ message: "Welcome back!" });
       } else {
         res.json({ message: "Something went wrong!" });
       }
