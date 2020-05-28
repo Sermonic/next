@@ -32,7 +32,18 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-const prices = [500, 1000, 5000, 15000, 25000, 50000, 250000];
+const prices = [
+  500,
+  1000,
+  2500,
+  5000,
+  10000,
+  15000,
+  20000,
+  25000,
+  50000,
+  250000,
+];
 
 export default function Search({ makes, models, singleColumn }: SearchProps) {
   const classes = useStyles();
